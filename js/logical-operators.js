@@ -119,6 +119,8 @@ else {
     console.log('Ви не знаєте? ECMAScript!')
 }
 
+const message = userInput.toLowerCase() === "ECMAScript".toLowerCase()? "Правильно": "Неправильно";
+
 const num1 = 15;
 const num2 = 10;
 let biggerNumber;
@@ -139,3 +141,22 @@ if(age > 18){
 } else{type = "child"}
 
 console.log(type);
+
+const a = 4;
+const b = 5;
+let result;
+if (a + b < 4) {
+  result = 'Нижче';
+} else {
+  result = 'Вище';
+}
+// console.log(result)
+const newResult = (a + b < 4)? 'Нижче' : 'Вище';
+console.log(newResult);
+
+// Використовуючи тернарний оператор, напишіть код, що запитує:
+//  ‘Яка “офіційна” назва JavaScript?’
+//   Якщо відвідувач вводить “ECMAScript”, виведіть “Правильно!”, 
+//   в іншому випадку — виведіть: “Ви не знаєте? ECMAScript!”
+// const userInput = "jnoik";
+// const userInput = "EcMAScriPt";
