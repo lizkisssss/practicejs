@@ -84,3 +84,66 @@ const checkStorage = function(storage, item) {
 };
 
 checkStorage(["apple", "plum", "pear"], "pLuM");
+
+// 1
+// Напиши функцію logItems(items) для перебора і логування масива
+
+const logItems = function(arr){
+    for(const item of arr) {
+        console.log(item)
+    }
+}
+
+logItems(["Mango", "Kiwi", "Poly", "Ajax"]);
+logItems([1, 2, 3, 4, 5]);
+
+//   2
+// Напиши скрипт пошуку логіна
+//  - Якщо логіна немає, вивести повідомлення
+//  'Користувач [логін] не знайдено.'
+//  - Якщо знайшли логін, вивести повідомлення
+//  'Користувач [логін] знайдено.'
+
+const loginToFind = 'aj4xth3m4n';
+const logins = ["m4ngoDoge", "k1widab3st", "poly1scute", "aj4xth3m4n"];
+
+const findLogin = function(loginsarrey, loginToFind){
+    for(const login of loginsarrey){
+        if(login === loginToFind){
+            return 'Користувач [логін] знайдено.'
+        }
+    }
+    return 'Користувач [логін] знайдено.'
+}
+
+console.log(findLogin(logins, 'avocod3r'));
+console.log(findLogin(logins, 'k1widab3st'));
+console.log(findLogin(logins, 'jam4l'));
+// console.log(findLogin(logins, 'poly1scut
+
+// Напиши функцию slugify(string) яка отримує рядок
+// і повертає URL-slug. Заголовок статті складається
+// тільки з букв та пропусків
+
+const slugify = function(string){
+    const formatedString = string.toLowerCase();
+    const arr = formatedString.split(" ");
+    return arr.join("-");
+}
+console.log(slugify("Top 10 benefits of React framework"));
+console.log(slugify("Azure Static Web Apps are Awesome"));
+console.log(slugify("Technical writing tips for non-native English speakers"));
+
+//  Напиши функцію яка повертає середнє значення з масиву чисел:
+//  У цій функції ми передаємо масив чисел в якості параметру,
+//  обчислюємо їхню суму та повертаємо середнє значення.
+const array = [1, 3, 2, 5, 4];
+const calculateAverage = function(arr){
+  let total= 0;
+  for(const number of arr){
+    total += number;
+  }
+ return total/arr.length;
+
+}
+ console.log(calculateAverage(array));
