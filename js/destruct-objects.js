@@ -47,8 +47,22 @@ console.log(playersOfline)
 const bestPlayers = players.filter((player) => player.timePlayed > 250);
 console.log(bestPlayers)
 //Find()
+const playerById = players.find((player) => (player.id === "player-2"));
+console.log(playerById);
+// Знайти гравця по імені
+const playerByName = players.find((player) => (player.name === 'Kiwi'));
+console.log(playerByName);
 // Знайти гравця по id
 // Знайти гравця по імені
+const isOlBestPlayers = players.every((player)=>(player.timePlayed > 200))
+console.log(isOlBestPlayers)
+
+
+const isOlPlayersOnline = players.some((player)=>(player.online ))
+console.log(isOlPlayersOnline)
 //every()
+
+const sortByPoints = players.sort((previousPlayer, nextPlayer) => previousPlayer.points - nextPlayer.points).map((player) => player.name)
 // Перевірити чи всі гравці мають час більше 200
+const sortByNames = [...players].sort((previousPlayer, nextPlayer) => previousPlayer.name.localeCompare(nextPlayer.name)).map((player) => player.name)
 // Перевірити чи всі гравці онлайн
